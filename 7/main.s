@@ -7,8 +7,8 @@ down:
 	push	rbp
 	mov	rbp, rsp
 	sub	rsp, 32
-	movsd	QWORD PTR -24[rbp], xmm0 ## передает через xmm0 double x
-	mov	rax, QWORD PTR -24[rbp]
+	movq     xmm3, xmm0 ## передает через xmm0 double x (поменял)
+	movq    rax, xmm3 ## (поменял)
 	movq	xmm0, rax ## передает через xmm0 double x
 	call	sqrt@PLT
 	movq	rax, xmm0 
@@ -29,8 +29,8 @@ up:
 	push	rbp
 	mov	rbp, rsp
 	sub	rsp, 32
-	movsd	QWORD PTR -24[rbp], xmm0 ## передает через xmm0 double x
-	mov	rax, QWORD PTR -24[rbp]
+	movq     xmm5, xmm0 ## передает через xmm0 double x (поменял)
+	movq    rax, xmm5 ## (поменял)
 	movq	xmm0, rax ## передает через xmm0 double x
 	call	sqrt@PLT
 	movq	rax, xmm0 ## floor(sqrt(x))
