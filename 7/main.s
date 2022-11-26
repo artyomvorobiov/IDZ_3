@@ -227,7 +227,7 @@ main:
 	movsd	QWORD PTR -144[rbp], xmm0
 	movsd	xmm0, QWORD PTR .LC9[rip]
 	movapd	xmm1, xmm0
-	part *= x * (1 / i1);
+	## part *= x * (1 / i1);
 	divsd	xmm1, QWORD PTR -144[rbp]
 	movsd	xmm0, QWORD PTR -192[rbp]
 	mulsd	xmm0, xmm1
@@ -340,7 +340,7 @@ main:
 	movsd	xmm0, QWORD PTR -120[rbp]
 	subsd	xmm0, xmm1
 	divsd	xmm0, QWORD PTR -120[rbp]
-	movsd	QWORD PTR -192[rbp], xmm 
+	movsd	QWORD PTR -192[rbp], xmm0 
 	
 	mov	DWORD PTR -204[rbp], 1 ## flag = 1;
 .L23:
